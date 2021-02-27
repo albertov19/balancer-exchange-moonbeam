@@ -374,6 +374,7 @@ export default class ProxyStore {
             const tokenAmountIn = scale(bnum(inputAmount), inputDecimals);
 
             // Use WETH address for Ether
+
             const tokenInToFind =
                 tokenIn === EtherKey
                     ? contractMetadataStore.getWethAddress()

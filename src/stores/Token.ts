@@ -96,7 +96,6 @@ export default class TokenStore {
                     userBalances[value.address][account].balance;
             }
         });
-
         return result;
     }
 
@@ -185,10 +184,9 @@ export default class TokenStore {
         fetchBlock: number
     ) {
         const fetchedBalances: TokenBalanceMap = {};
-
+        let tokenAddress;
         balances.forEach((balance, index) => {
-            const tokenAddress = tokens[index];
-
+            tokenAddress = tokens[index];
             if (
                 (this.isBalanceFetched(tokenAddress, account) &&
                     this.isBalanceStale(tokenAddress, account, fetchBlock)) ||
@@ -364,6 +362,7 @@ export default class TokenStore {
 
             this.setDecimals(tokenList, decimalsList);
             this.setBalances(tokenList, balances, account, balBlock.toNumber());
+
             console.debug('[All Fetches Success]');
         } catch (e) {
             console.error('[Fetch] Balancer Token Data', { error: e });

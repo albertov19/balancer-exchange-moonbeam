@@ -158,6 +158,15 @@ const SwapForm = observer(({ tokenIn, tokenOut }) => {
                 expectedSlippage.plus(bnum(extraSlippageAllowance))
             );
 
+            /*console.log('----SWAP');
+            console.log(swaps);
+            console.log(swapFormStore.inputToken.address);
+            console.log(bnum(inputAmount));
+            console.log(swapFormStore.inputToken.decimals);
+            console.log(swapFormStore.outputToken.address);
+            console.log(bnum(minAmountOut));
+            console.log(swapFormStore.outputToken.decimals);*/
+
             await proxyStore.batchSwapExactIn(
                 swaps,
                 swapFormStore.inputToken.address,

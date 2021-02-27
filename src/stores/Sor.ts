@@ -277,6 +277,7 @@ export default class SorStore {
         );
 
         this.processedPools = pools;
+
         this.processedPathsIn = processPaths(pathData, pools, 'swapExactIn');
 
         this.epsOfInterestIn = processEpsOfInterestMultiHop(
@@ -341,6 +342,9 @@ export default class SorStore {
     ): Promise<[BigNumber, any[][]]> => {
         let processedPaths = this.processedPathsIn;
         let epsOfInterest = this.epsOfInterestIn;
+        //console.log('------');
+        //console.log(processedPaths);
+        //console.log(epsOfInterest);
 
         if (swapType === SwapMethods.EXACT_OUT) {
             processedPaths = this.processedPathsOut;

@@ -790,12 +790,13 @@ export default class SwapFormStore {
                 this.inputToken.hasIcon = filteredWhitelistedTokens[0].hasIcon;
 
                 let balanceBn;
-                if (inputTokenAddress !== EtherKey)
+
+                if (inputTokenAddress !== EtherKey) {
                     balanceBn = tokenStore.getBalance(
-                        toChecksum(inputTokenAddress),
+                        inputTokenAddress,
                         account
                     );
-                else
+                } else
                     balanceBn = tokenStore.getBalance(
                         inputTokenAddress,
                         account
