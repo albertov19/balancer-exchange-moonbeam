@@ -1,30 +1,28 @@
-# Balancer Exchange
+# Balancer Exchange for Moonbeam
 
-## Development
+This is forked from the original [balancer-exchange repository](https://github.com/balancer-labs/balancer-exchange). It was adapted so it works with Moonbase Alpha and a Moonbeam Standalone Node
 
--   Environment Config
+## Getting Started
 
-    -   Copy .env.example -> .env
-    -   Configure backup node urls
+Copy the .env.example file:
 
-    ```
-    # Backup node url
-    REACT_APP_RPC_URL_1="https://mainnet.infura.io/v3/{apiKey}"
-    REACT_APP_RPC_URL_3="https://ropsten.infura.io/v3/{apiKey}"
-    REACT_APP_RPC_URL_42="https://kovan.infura.io/v3/{apiKey}"
-    REACT_APP_RPC_URL_LOCAL="http://localhost:8545"
-    ```
+```
+cp .env.example .env
+```
 
-    -   Configure supported network
+Double check the data on the file and modify accordingly (port for standalone for example). Configure supported network (by default was set to Moonbase Alpha)
 
-    ```
-    # Supported Network ID (e.g. mainnet = 1, rinkeby = 4, kovan = 42)
-    REACT_APP_SUPPORTED_NETWORK_ID="42"
-    ```
+```
+# Supported Network ID (e.g. mainnet = 1, rinkeby = 4, kovan = 42)
+REACT_APP_SUPPORTED_NETWORK_ID="1287"
+```
 
--   Build & run locally
+Build and/or run locally
 
-    ```
-    yarn build
-    yarn start
-    ```
+```
+yarn build
+yarn start
+```
+
+
+Have fun :) 
