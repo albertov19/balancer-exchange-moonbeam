@@ -71,7 +71,7 @@ const Header = () => {
                 </Title>
             </HeaderElement>
             <HeaderElement>
-                <Link href="https://pools.balancer.exchange" target="_blank">
+                <Link href="http://localhost:8080" target="_blank">
                     Add Liquidity
                 </Link>
                 <Wallet />
