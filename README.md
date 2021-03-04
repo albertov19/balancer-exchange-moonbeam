@@ -19,6 +19,12 @@ REACT_APP_SUPPORTED_NETWORK_ID="1287"
 
 Depending on the Network you selected you need to rename the `allPublicPools*.json` file located in `./src` to the one of the network you are trying to run. (Once Moonbeam supports TheGraph and there is a Balancer SubGraph running, this should not be necessary)
 
+Install packages:
+
+```
+yarn install
+```
+
 Build and/or run locally
 
 ```
